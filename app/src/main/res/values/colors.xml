@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="blue">#5DAEED</color>
+    <color name="red">#BF2622</color>
+    <color name="drive_cardView_color">#ECEAEA</color>
+    <color name="switch_color">#2E76E0</color>
+    <color name="green">#32A050</color>
+    <color name="grey">#9C9C9C</color>
+    <color name="grey2">#F8F8F8</color>
+
+
+</resources>

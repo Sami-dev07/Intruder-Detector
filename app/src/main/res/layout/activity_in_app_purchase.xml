@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/inapp_bg"
+    android:orientation="vertical"
+    tools:context=".InAppPurchase">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_150sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:src="@drawable/premium_bg" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_70sdp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <CheckBox
+            android:id="@+id/adsFreeCheckBox"
+            android:layout_width="@dimen/_180sdp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:checked="true"
+            android:text="Ads Free"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp" />
+
+        <CheckBox
+            android:id="@+id/autoGoogleDriveSyncCheckBox"
+            android:layout_width="@dimen/_180sdp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:text="Auto Google Drive Sync"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp" />
+
+        <CheckBox
+            android:id="@+id/unlockAllFeaturesCheckBox"
+            android:layout_width="@dimen/_180sdp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:text="Unlock All Features"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/purchaseNow"
+        android:layout_width="@dimen/_180sdp"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:src="@drawable/purchase_now" />
+
+    <ImageView
+        android:id="@+id/continueWithAds"
+        android:layout_width="@dimen/_180sdp"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:src="@drawable/continue_wth_ads" />
+
+</LinearLayout>

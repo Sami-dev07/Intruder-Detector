@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.software.device_admin"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/fb_text"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.IntruderDetector"
+        tools:targetApi="31">
+        <activity
+            android:name=".PermissionActivity1"
+            android:exported="false" />
+        <activity
+            android:name=".LoadingAd"
+            android:exported="false" />
+        <activity
+            android:name=".newBoarding.LanguageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".newBoarding.OnboardingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainCode.ExitActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainCode.OnBoardingScreens.SplashScreenActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".InAppPurchase"
+            android:exported="false" />
+        <activity
+            android:name=".MainCode.IntruderLocation.ActivateLocationPermission"
+            android:exported="false" />
+        <activity
+            android:name=".MainCode.OnBoardingScreens.PrivacyPolicyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainCode.OnBoardingScreens.PermissionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainCode.IntruderLocation.SavedIntruderLocations"
+            android:exported="false" />
+        <activity
+            android:name=".MainCode.IntruderSelfieActivities.SelfieModeActivate"
+            android:exported="false" />
+        <activity
+            android:name=".MainCode.SettingActivity.SettingScreen"
+            android:exported="false" />
+        <activity
+            android:name=".MainCode.DriveActivities.DriveMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainCode.IntruderLocation.LocationMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainCode.IntruderSelfieActivities.ActivateServiceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainCode.MainUi"
+            android:exported="false" />
+        <activity
+            android:name=".MainCode.OnBoardingScreens.CloudOnBoardScreen"
+            android:exported="false" />
+        <activity
+            android:name=".MainCode.OnBoardingScreens.SmSOnBoardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainCode.OnBoardingScreens.LocationOnBoardScreen"
+            android:exported="false" />
+        <activity
+            android:name=".MainCode.OnBoardingScreens.SelfieOnBoardScreen"
+            android:exported="false" />
+        <activity
+            android:name=".MainCode.OnBoardingScreens.StartingPointActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".MainCode.IntruderSavedImages.ViewIntrudersActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainCode.IntruderSavedImages.IntruderImagesActivity"
+            android:exported="false" />
+
+        <service
+            android:name=".MISC.CameraService"
+            android:exported="false"
+            android:foregroundServiceType="camera" />
+
+        <receiver
+            android:name=".MISC.PasswordReceiver"
+            android:exported="false"
+            android:permission="android.permission.BIND_DEVICE_ADMIN">
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/rules_admin" />
+
+            <intent-filter>
+                <action android:name="android.app.action.ACTION_PASSWORD_FAILED" />
+                <action android:name="android.app.action.ACTION_PASSWORD_SUCCEEDED" />
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+                <action android:name="android.app.action.DEVICE_ADMIN_DISABLED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".MISC.PhoneUnlockedReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/appID" />
+    </application>
+
+</manifest>

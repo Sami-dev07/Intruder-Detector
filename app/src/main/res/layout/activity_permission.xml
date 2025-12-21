@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/permissions"
+    tools:context="com.intruderselfie.geolocation.hiddenpic.thirdeye.MainCode.OnBoardingScreens.PermissionActivity">
+
+    <ImageView
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_120sdp"
+        android:layout_marginTop="@dimen/_60sdp"
+        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/permission_icon"/>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/grantPermissions"
+        android:layout_width="@dimen/_170sdp"
+        android:layout_height="@dimen/_42sdp"
+        app:cardCornerRadius="@dimen/_220sdp"
+        app:cardMaxElevation="@dimen/_10sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:elevation="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_25sdp"
+        app:cardElevation="@dimen/_10sdp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/quicksand_bold"
+            android:gravity="center"
+            android:text="Grant Permissions"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp" />
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
